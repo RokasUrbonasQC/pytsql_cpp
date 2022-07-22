@@ -24,6 +24,9 @@ repos:
     - id: mypy-conda
       additional_dependencies: [ mypy=0.800, python=3.7.9 ]
       exclude: ^src/pytsql/grammar/
+#      args:
+#        - --follow-imports=silent
+      entry: mypy --follow-imports=silent  # TODO: Remove this! Super hacky
  - repo: https://github.com/Quantco/pre-commit-mirrors-pyupgrade
    rev: 2.7.2
    hooks:
