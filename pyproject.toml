@@ -1,45 +1,6 @@
 [build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
-
-[project]
-name = "pytsql"
-authors = [
-  {name = "Alex Gonopolskiy", email = "agonopol@gmail.com"},
-  {name = "Kevin Klein", email = "kevin.klein@quantco.com"},
-  {name= "Encho Mishinev", email = "encho.mishinev@quantco.com"}
-]
-
-maintainers = [{name = "Kevin Klein", email = "kevin.klein@quantco.com"}]
-keywords = [
-  "sql",
-  "mssql",
-  "databases",
-  "automation",
-  "parametrization",
-]
-classifiers = [
-  "Development Status :: 5 - Production/Stable",
-  "License :: OSI Approved :: BSD License",
-  "Operating System :: OS Independent",
-  "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.7",
-  "Topic :: Database"
-]
-readme = "README.md"
-dynamic = ["version", "description"]
-
-requires-python = ">=3.7.0"
-
-dependencies = [
-    "sqlalchemy >=1.4",
-    "antlr4-python3-runtime ==4.9.2",
-    "pyodbc >=4.0.30"
-]
-
-[project.urls]
-Source = "https://github.com/quantco/pytsql"
-
+requires = ['setuptools', 'setuptools-scm', 'wheel']
+build-backend = "setuptools.build_meta"
 
 [tool.black]
 exclude = '''
@@ -60,3 +21,7 @@ line_length = 88
 known_first_party = "pytsql"
 skip_glob = '\.eggs/*,\.git/*,\.venv/*,build/*,dist/*'
 default_section = 'THIRDPARTY'
+
+[tool.mypy]
+# TODO: Consider adding more options that are included in the cookiecutter project
+follow_imports = "silent"  # TODO: Specify directory! (https://github.com/python/mypy/issues/3998#issuecomment-331766932)

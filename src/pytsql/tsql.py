@@ -11,7 +11,8 @@ from antlr4.error.ErrorListener import ErrorListener
 from antlr4.Recognizer import Recognizer
 from sqlalchemy.engine import Connection
 
-from pytsql.grammar import tsqlLexer, tsqlParser
+from pytsql.grammar.tsqlLexer import tsqlLexer
+from pytsql.grammar.tsqlParser import tsqlParser
 
 _REPLACE_START = "<replace>"
 _REPLACE_END = "</replace>"
