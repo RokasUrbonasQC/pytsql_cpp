@@ -32,9 +32,7 @@ def run_setup():
     )
 
     # Define a package
-    setuptools.setup(  # TODO: Remove redundant data already defined in other config files
-        ext_modules=[parser_ext],
-    )
+    setuptools.setup(ext_modules=[parser_ext])
 
 
 def get_files(path, pattern):

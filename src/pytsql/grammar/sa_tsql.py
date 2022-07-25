@@ -3,6 +3,7 @@
 
 import sys
 import types
+from typing import Optional
 
 import antlr4
 from antlr4 import InputStream, CommonTokenStream, Token
@@ -32,7 +33,7 @@ class SA_ErrorListener:
     def syntaxError(
         self,
         input_stream: InputStream,
-        offendingSymbol: Token,
+        offendingSymbol: Optional[Token],  # Note: speedy  incorrectly generates the type annotation without `Optional`
         char_index: int,
         line: int,
         column: int,
