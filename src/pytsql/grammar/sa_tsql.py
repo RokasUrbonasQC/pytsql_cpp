@@ -33,7 +33,7 @@ class SA_ErrorListener:
     def syntaxError(
         self,
         input_stream: InputStream,
-        offendingSymbol: Optional[Token],  # Note: speedy  incorrectly generates the type annotation without `Optional`
+        offendingSymbol: Optional[Token],  # Note: speedy antlr tool incorrectly generates the type annotation without `Optional`
         char_index: int,
         line: int,
         column: int,
