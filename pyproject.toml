@@ -22,6 +22,6 @@ known_first_party = "pytsql"
 skip_glob = '\.eggs/*,\.git/*,\.venv/*,build/*,dist/*'
 default_section = 'THIRDPARTY'
 
-[tool.mypy]
-# TODO: Consider adding more options that are included in the cookiecutter project
-follow_imports = "silent"  # TODO: Specify directory! (https://github.com/python/mypy/issues/3998#issuecomment-331766932)
+[[tool.mypy.overrides]]
+module = "pytsql.grammar.*"
+follow_imports = "silent"
